@@ -60,7 +60,7 @@ public class MainActivity extends Activity {
                 Random rand = new Random();
                 turn_count -= rand.nextInt(3);
                 player_count++;
-               // Toast.makeText(MainActivity.this, String.valueOf(turn_count), Toast.LENGTH_SHORT).show();
+
 
                 limit = String.valueOf(top.getText());
                 //
@@ -88,6 +88,7 @@ public class MainActivity extends Activity {
 
                 if (turn_count < 0)
                 {
+                Toast.makeText(MainActivity.this, player+" Wins! Markan Still pays Ted!", Toast.LENGTH_SHORT).show();
                 turn_count = 1000;
                 new Thread(new Runnable(){
                     @Override
